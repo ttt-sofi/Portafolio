@@ -1,0 +1,36 @@
+.typing-container {
+    font-family: $font-secondary;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    display: inline-block;
+    animation: typing 6s steps(40, end) infinite, blink 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    0% { width: 0; }
+    100% { width: 40ch; } /* Ajusta este valor al número de caracteres a mostrar */
+  }
+
+  @keyframes blink {
+    0%, 50% { border-color: white; }
+    50.1%, 100% { border-color: transparent; }
+  }
+
+  .typing-container-mobile {
+    display: none;
+    font-family: $font-secondary;
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  @media (max-width: 1200px) {
+    .typing-container {
+        display:none
+    }
+
+    .typing-container-mobile {
+        display: block;
+      }
+  }
